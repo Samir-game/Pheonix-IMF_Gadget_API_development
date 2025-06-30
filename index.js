@@ -1,6 +1,7 @@
 const dotenv= require('dotenv')
 const app= require('./app.js')
 const {connectionDB}= require('./database/db.config.js')
+const {connectRedis}= require("./database/redis.config.js")
 
 dotenv.config({ 
     path:"./.env"
@@ -9,6 +10,7 @@ dotenv.config({
 const PORT=process.env.PORT || 3001
 
 connectionDB()
+.then(() => connectRedis())
 .then(() => {
     app.listen(PORT,()=>{
       console.log("SERVER started at PORT:",PORT)
