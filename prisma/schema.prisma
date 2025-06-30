@@ -24,7 +24,7 @@ enum gadgetStatus {
 model Gadget {
   id              String        @id @default(uuid())
   name            String
-  codename        String        @unique
+  codename        String        
   status          gadgetStatus  @default(Available)
   decommissionedAt DateTime?
   createdAt       DateTime      @default(now())

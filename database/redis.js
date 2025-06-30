@@ -4,7 +4,7 @@ const redisClient = createClient({
   url: process.env.REDIS_URL,
 });
 
-async function connectRedis() {
+async function connectRedis(){
   try {
     await redisClient.connect();
     console.log("Redis connected successfully");
