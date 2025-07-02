@@ -6,8 +6,8 @@ const tokenRouter= require("./routes/token.route.js")
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-app.use("/api",gadgetRouter);
-app.use("/api",tokenRouter);
+app.use("/api",gadgetRouter); // gor gadggets routing
+app.use("/api",tokenRouter); //for authentication 
 
 
 module.exports=app

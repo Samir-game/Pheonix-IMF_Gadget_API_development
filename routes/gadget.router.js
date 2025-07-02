@@ -4,6 +4,8 @@ const {getGadgets,createGadget,updateGadget,decommissionGadget}=require("../cont
 const {selfDestruct}= require("../controllers/selfDestruct.controller.js");
 const {auth}= require("../middlewares/auth.middleware.js");
 
+
+// all the routes for authorised user
 router
 .route("/gadgets")
 .get(auth, getGadgets)

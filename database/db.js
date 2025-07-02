@@ -1,6 +1,7 @@
 const { PrismaClient } = require('../generated/prisma')
 const prisma = new PrismaClient()
 
+// connecting Postgres database (cloud-based: neon)
 async function connectionDB(){
   try {
     await prisma.$connect()

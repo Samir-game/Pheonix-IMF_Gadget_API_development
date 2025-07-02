@@ -4,6 +4,7 @@ const redisClient = createClient({
   url: process.env.REDIS_URL,
 });
 
+// connecting redis databse(cloud-based: upstash)
 async function connectRedis(){
   try {
     await redisClient.connect();
